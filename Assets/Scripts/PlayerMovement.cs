@@ -47,18 +47,21 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 knockbackDirection = Vector2.left;
             StartCoroutine(AnimateKnockback(knockbackDirection)); // Apply knockback towards left
+
         }
         // Check bottom edge collision
         if (screenPosition.y <= 0)
         {
             Vector2 knockbackDirection = Vector2.up;
             StartCoroutine(AnimateKnockback(knockbackDirection)); // Apply knockback upwards
+
         }
         // Check top edge collision
         else if (screenPosition.y >= screenHeight)
         {
             Vector2 knockbackDirection = Vector2.down;
             StartCoroutine(AnimateKnockback(knockbackDirection)); // Apply knockback downwards
+
         }
     }
 
