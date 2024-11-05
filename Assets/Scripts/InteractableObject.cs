@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,13 +6,14 @@ public class InteractableObject : MonoBehaviour
 {
     private GameObject player; // Reference to the player GameObject
     public float interactionRange = 2f; // Range within which the player can interact with the object
-    public GameObject interactableObject; // The interactable object
-    public GameObject interactionPanel; // Reference to the UI Panel for interaction
+    private UIManager uiManager; // Reference to the UIManager
+
+    public string panelName; // Name of the panel this object should trigger
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player"); // Find the player GameObject
-        interactionPanel.SetActive(false); // Ensure the interaction panel is initially inactive
+        uiManager = FindObjectOfType<UIManager>(); // Find the UIManager in the scene
     }
 
     private void Update()
@@ -19,14 +21,15 @@ public class InteractableObject : MonoBehaviour
         // Check for left mouse button click
         if (Input.GetMouseButtonDown(0)) // 0 corresponds to the left mouse button
         {
-            if (interactionPanel.activeSelf)
+            // Check if the player is within interaction range of this object
+            if (IsPlayerInRange())
             {
-                ClosePanel(); // Close the interaction panel if it's already open
+                Debug.Log($"{gameObject.name} clicked! Showing panel."); // Log when the object is clicked
+                uiManager.ShowPanel(panelName); // Show the specified panel if the player is in range
             }
-            else if (IsPlayerInRange())
+            else
             {
-                Debug.Log("Hello, I am " + interactableObject.name); // Log interaction with the object
-                interactionPanel.SetActive(true); // Show the interaction panel if the player is in range
+                Debug.Log($"{gameObject.name} is out of range."); // Log if the player is out of range
             }
         }
     }
@@ -36,12 +39,7 @@ public class InteractableObject : MonoBehaviour
     {
         // Calculate the distance between the object and the player
         float distance = Vector3.Distance(transform.position, player.transform.position);
+        Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
         return distance <= interactionRange; // Return true if the player is within interaction range
-    }
-
-    // Method to close the interaction panel
-    public void ClosePanel()
-    {
-        interactionPanel.SetActive(false); // Hide the interaction panel
     }
 }
