@@ -3,30 +3,45 @@ using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    public GameObject panel; // Assign the panel in the inspector
+    private GameObject player; // Reference to the player GameObject
+    public float interactionRange = 2f; // Range within which the player can interact with the object
+    public GameObject interactableObject; // The interactable object
+    public GameObject interactionPanel; // Reference to the UI Panel for interaction
 
-    void Start()
+    private void Start()
     {
-        if (panel != null)
+        player = GameObject.FindGameObjectWithTag("Player"); // Find the player GameObject
+        interactionPanel.SetActive(false); // Ensure the interaction panel is initially inactive
+    }
+
+    private void Update()
+    {
+        // Check for left mouse button click
+        if (Input.GetMouseButtonDown(0)) // 0 corresponds to the left mouse button
         {
-            panel.SetActive(false); // Hide the panel initially
+            if (interactionPanel.activeSelf)
+            {
+                ClosePanel(); // Close the interaction panel if it's already open
+            }
+            else if (IsPlayerInRange())
+            {
+                Debug.Log("Hello, I am " + interactableObject.name); // Log interaction with the object
+                interactionPanel.SetActive(true); // Show the interaction panel if the player is in range
+            }
         }
     }
 
-    void OnMouseDown()
+    // Check if the player is within interaction range of the object
+    private bool IsPlayerInRange()
     {
-        if (panel != null)
-        {
-            panel.SetActive(true); // Show the panel when the prefab is clicked
-        }
+        // Calculate the distance between the object and the player
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        return distance <= interactionRange; // Return true if the player is within interaction range
     }
 
-    // Method to hide the panel, which you can assign to a button's OnClick event
-    public void HidePanel()
+    // Method to close the interaction panel
+    public void ClosePanel()
     {
-        if (panel != null)
-        {
-            panel.SetActive(false); // Hide the panel when this function is called
-        }
+        interactionPanel.SetActive(false); // Hide the interaction panel
     }
 }
