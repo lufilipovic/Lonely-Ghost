@@ -339,6 +339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_TagString
+      value: Candy
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
@@ -558,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyCount: 0
+  candyCountText: {fileID: 529497585}
 --- !u!1001 &332038045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,6 +614,10 @@ PrefabInstance:
     - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Name
       value: Candy1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_TagString
+      value: Candy
       objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
@@ -15604,6 +15613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_TagString
+      value: Candy
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
@@ -15770,6 +15783,10 @@ PrefabInstance:
     - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Name
       value: Candy1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_TagString
+      value: Candy
       objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
@@ -17071,6 +17088,10 @@ PrefabInstance:
     - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Name
       value: Candy1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573595996350995041, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_TagString
+      value: Candy
       objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel

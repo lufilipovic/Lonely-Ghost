@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CandyPanel
   - NPC
+  - Candy
   layers:
   - Default
   - TransparentFX

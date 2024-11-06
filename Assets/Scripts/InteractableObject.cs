@@ -1,12 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
     private GameObject player; // Reference to the player GameObject
     public float interactionRange = 2f; // Range within which the player can interact with the object
     private UIManager uiManager; // Reference to the UIManager
-    public string panelToShow; // Public variable to set which panel to show
+    private CandyCollection candyCollection; // Reference to the CandyCollection script
+
 
     private void Start()
     {
@@ -22,8 +24,21 @@ public class InteractableObject : MonoBehaviour
             // Check if the player is within interaction range of this object
             if (IsPlayerInRange())
             {
-                Debug.Log($"{gameObject.name} clicked! Showing panel."); // Log when the object is clicked
-                uiManager.ShowPanel(panelToShow); // Show the specified interaction panel
+                //Debug.Log($"{gameObject.name} clicked! Showing panel."); // Log when the object is clicked
+                //uiManager.ShowPanel($"Hello, I am {gameObject.name}"); // Show the interaction panel if the player is in range
+
+                // Check if the object has the "Candy" tag
+                if (gameObject.CompareTag("Candy"))
+                {
+                    candyCollection.CollectCandy(); // Collect candy
+                    Destroy(gameObject); // Destroy the candy object after collection
+                    Debug.Log($"Candy collected! Total candy: {candyCollection.candyCount}"); // Log total candy count
+                }
+                else
+                {
+                    Debug.Log($"{gameObject.name} is not candy."); // Log if it's not candy
+                    uiManager.ShowPanel("NPCPanel"); // Show the interaction panel if the player is in range
+                }
             }
             //else
             //{
@@ -37,7 +52,7 @@ public class InteractableObject : MonoBehaviour
     {
         // Calculate the distance between the object and the player
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        //Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
+        Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
         return distance <= interactionRange; // Return true if the player is within interaction range
     }
 }
