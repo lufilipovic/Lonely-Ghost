@@ -1,14 +1,12 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
     private GameObject player; // Reference to the player GameObject
     public float interactionRange = 2f; // Range within which the player can interact with the object
     private UIManager uiManager; // Reference to the UIManager
-
-    public string panelName; // Name of the panel this object should trigger
+    public string panelToShow; // Public variable to set which panel to show
 
     private void Start()
     {
@@ -25,12 +23,12 @@ public class InteractableObject : MonoBehaviour
             if (IsPlayerInRange())
             {
                 Debug.Log($"{gameObject.name} clicked! Showing panel."); // Log when the object is clicked
-                uiManager.ShowPanel(panelName); // Show the specified panel if the player is in range
+                uiManager.ShowPanel(panelToShow); // Show the specified interaction panel
             }
-            else
-            {
-                Debug.Log($"{gameObject.name} is out of range."); // Log if the player is out of range
-            }
+            //else
+            //{
+            //    Debug.Log($"{gameObject.name} is out of range."); // Log if the player is out of range
+            //}
         }
     }
 
@@ -39,7 +37,7 @@ public class InteractableObject : MonoBehaviour
     {
         // Calculate the distance between the object and the player
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
+        //Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
         return distance <= interactionRange; // Return true if the player is within interaction range
     }
 }
