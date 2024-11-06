@@ -37,7 +37,8 @@ public class InteractableObject : MonoBehaviour
                 else
                 {
                     Debug.Log($"{gameObject.name} is not candy."); // Log if it's not candy
-                    uiManager.ShowPanel("NPCPanel"); // Show the interaction panel if the player is in range
+                   
+                    uiManager.ShowPanel(panelName: "NPCPanel"); // Show the interaction panel if the player is in range
                 }
             }
             //else
@@ -52,7 +53,7 @@ public class InteractableObject : MonoBehaviour
     {
         // Calculate the distance between the object and the player
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
+        //Debug.Log($"Distance to player: {distance}"); // Log the distance to debug
         return distance <= interactionRange; // Return true if the player is within interaction range
     }
 }

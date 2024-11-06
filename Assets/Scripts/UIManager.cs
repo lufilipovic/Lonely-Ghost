@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
             GameObject panel = child.gameObject;
             panels[panel.name] = panel; // Store each panel with its name as the key
             panel.SetActive(false); // Ensure all panels start inactive
-
+            Debug.Log(panel);
         }
 
     }
