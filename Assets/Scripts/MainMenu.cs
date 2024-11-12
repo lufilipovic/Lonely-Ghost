@@ -9,19 +9,23 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 
-    
 {
     public GameObject instructionsPanel;
     public Button instructionsButton;
     public Button playButton;
     public Button quitButton;
 
-// Play game function - OnCLick
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
+    // Play game function - OnCLick
     public void PlayGame()
     {
         SceneManager.LoadScene("TrickOrTreatScene");
     }
-// SetActive instructions Panel 
+    // SetActive instructions Panel 
     public void InstructionsOn()
     {
         instructionsPanel.SetActive(true);
@@ -43,6 +47,18 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    Debug.Log("Quit Game");
+        Debug.Log("Quit Game");
+    }
+
+    public void RestartGame(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        //dodat panel za pauziranje igre
+        Debug.Log("Game Paused!");
     }
 }
