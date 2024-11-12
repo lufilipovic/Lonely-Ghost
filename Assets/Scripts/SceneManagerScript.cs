@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    public GameObject howToPlayPanel;
+    //public GameObject howToPlayPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class SceneManagerScript : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f; // Set time scale to 0 to pause the game
-        howToPlayPanel.SetActive(true); // Show the how-to-play panel
+        //howToPlayPanel.SetActive(true); // Show the how-to-play panel
         Debug.Log("Pausing game: " + Time.timeScale);
     }
 
@@ -55,7 +55,7 @@ public class SceneManagerScript : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f; // Set time scale back to 1 to resume the game
-        howToPlayPanel.SetActive(false); // Hide the how-to-play panel
+        //howToPlayPanel.SetActive(false); // Hide the how-to-play panel
         Debug.Log("Resuming game: " + Time.timeScale);
     }
 

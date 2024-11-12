@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 45667826891994844}
   - component: {fileID: 6119106028620376122}
   - component: {fileID: 3105283423923295291}
-  - component: {fileID: 6035200900289339384}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -121,17 +120,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 28.672497, y: 38.23}
   m_Direction: 0
---- !u!114 &6035200900289339384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020418386619584371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95b1722aab7c14677a0472f4ea7793ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRange: 2
-  panelName: 
