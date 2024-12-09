@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d983f4ed6ebd420fb63de139ea9c6e8, type: 3}
-  m_Name: Dialogue
+  m_Name: DialogueNPC1 3
   m_EditorClassIdentifier: 
   dialogueLines:
   - speakerName: NPC
-    dialogueText: "Hey there, ghostie! \n"
+    dialogueText: 'Well, well, well. Another beggar off the street. '
   - speakerName: NPC
-    dialogueText: "I bet you\u2019re here for some candy\u2026"
+    dialogueText: "Look at you \u2013 you know, I\u2019m in no mood to just hand
+      out the candy I\u2019ve worked hard for."
   - speakerName: NPC
-    dialogueText: "But you know what\u2019s better than just getting candy for saying
-      \u201Ctrick or treat\u201D? Working for it!\n"
+    dialogueText: You need to earn it.
   - speakerName: Barnaboos
-    dialogueText: What?!
+    dialogueText: "Well isn\u2019t that just great\u2026"
   - speakerName: NPC
-    dialogueText: "Yes, let\u2019s give it a try. I\u2019m sure you\u2019ll enjoy
-      it. It\u2019s not that hard. Just one small riddle to solve and that is all!"
+    dialogueText: " It\u2019s up to you. You can answer my question or go find your
+      candy elsewhere.\n"
+  - speakerName: Barnaboos
+    dialogueText: "Alright, let\u2019s try."

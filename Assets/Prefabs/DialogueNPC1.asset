@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: DialogueNPC1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - speakerName: Barnaboos
-    dialogueText: 'whats your name? '
-  - speakerName: Barnaboos
-    dialogueText: Hello!
   - speakerName: NPC
-    dialogueText: "Well, well, look who\u2019s here! I have a riddle for you!"
+    dialogueText: 'What are you supposed to be? '
   - speakerName: NPC
-    dialogueText: "Let\u2019s see if you can crack it!"
+    dialogueText: A ghost?
+  - speakerName: NPC
+    dialogueText: hahahahahaha
+  - speakerName: NPC
+    dialogueText: "If you are really a ghost, then prove it \u2013 answer a question
+      only a ghost could know."
+  - speakerName: Barnaboos
+    dialogueText: What would that be?
+  - speakerName: NPC
+    dialogueText: 'Well, how about a question about something creepy and spooky?
+
+'
