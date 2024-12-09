@@ -9,6 +9,12 @@ TagManager:
   - Candy
   - House
   - bucketCandy
+  - Moon
+  - Hat
+  - Bat
+  - yellow
+  - orange
+  - purple
   layers:
   - Default
   - TransparentFX
