@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d983f4ed6ebd420fb63de139ea9c6e8, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: NPC
+    dialogueText: "Hey there, ghostie! \n"
+  - speakerName: NPC
+    dialogueText: "I bet you\u2019re here for some candy\u2026"
+  - speakerName: NPC
+    dialogueText: "But you know what\u2019s better than just getting candy for saying
+      \u201Ctrick or treat\u201D? Working for it!\n"
+  - speakerName: Barnaboos
+    dialogueText: What?!
+  - speakerName: NPC
+    dialogueText: "Yes, let\u2019s give it a try. I\u2019m sure you\u2019ll enjoy
+      it. It\u2019s not that hard. Just one small riddle to solve and that is all!"

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d983f4ed6ebd420fb63de139ea9c6e8, type: 3}
+  m_Name: DialogueNPC1 1
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: NPC
+    dialogueText: Oh my! You scared me.
+  - speakerName: NPC
+    dialogueText: "My heart, it\u2019s racing. "
+  - speakerName: NPC
+    dialogueText: "But as my father always said \u2013 he was a teacher at heart
+      \u2013 there\u2019s no better cure for shock than making someone sit for an
+      exam."
+  - speakerName: NPC
+    dialogueText: Want to help me out?
+  - speakerName: Barnaboos
+    dialogueText: "Oh, great\u2026"
+  - speakerName: Barnaboos
+    dialogueText: Alright, I guess I have no choice.
+  - speakerName: NPC
+    dialogueText: Great! Well, not quite, I now need to think of something to ask
+      you.
+  - speakerName: NPC
+    dialogueText: Oh, I got it!
