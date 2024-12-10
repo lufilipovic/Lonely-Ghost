@@ -5,88 +5,90 @@ using UnityEngine.UI;
 public class NPCRiddles : MonoBehaviour
 {
     [Header("Riddle Settings")]
-    [TextArea] public string riddleText;
-    public string[] answers = new string[3];
-    public int correctAnswerIndex;
+    [TextArea] public string riddleText; // The riddle text specific to this NPC
+    public string[] answers = new string[3]; // The possible answers specific to this NPC
+    public int correctAnswerIndex; // The index of the correct answer for this NPC
 
-    [Header("UI References")]
-    public GameObject riddlePanel;
-    public TextMeshProUGUI riddleDisplayText;
-    public Button[] answerButtons;
+    [Header("Shared UI References")]
+    public GameObject riddlePanel; // Shared riddle panel
+    public TextMeshProUGUI riddleDisplayText; // Shared riddle text display
+    public Button[] answerButtons; // Shared answer buttons
+    public GameObject correctAnswerPanel; // Shared correct answer panel
+    public GameObject wrongAnswerPanel; // Shared wrong answer panel
+    public Button restartButton; // Restart button on the wrong answer panel
+    public Button exitButton; // Exit button on the correct answer panel
 
-    private GameObject player;
-    public float playerRange = 2f;
+    private bool hasAnsweredCorrectly = false; // Tracks if the riddle has been answered correctly
 
-    private bool hasAnsweredCorrectly = false;
-    private bool riddleReadyToShow = false;
+    public bool HasAnsweredCorrectly => hasAnsweredCorrectly; // Public getter for encapsulation
 
-    public GameObject correctAnswerPanel;
-    public GameObject wrongAnswerPanel;
-    public Button restartButton; // Reference to the Restart button on the wrongAnswerPanel
-    public Button exitButton;
+    private CandyCollection candyCollection; // Reference to the CandyCollection script
 
-    void Start()
+    private void Start()
     {
+        // Find the CandyCollection script in the scene
+        candyCollection = FindObjectOfType<CandyCollection>();
+
+        if (candyCollection == null)
+        {
+            Debug.LogError("CandyCollection script not found in the scene!");
+        }
+        // Ensure shared panels are hidden initially
         riddlePanel.SetActive(false);
-        player = GameObject.FindGameObjectWithTag("Player");
+        correctAnswerPanel.SetActive(false);
+        wrongAnswerPanel.SetActive(false);
 
-        // Subscribe to the DialogueManager's event
-        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
-        if (dialogueManager != null)
+        // The Restart button listener is dynamically assigned when showing the riddle
+        if (exitButton != null)
         {
-            dialogueManager.OnDialogueFinished += PrepareRiddle;
-        }
-
-        // Assign the Restart button functionality
-        if (restartButton != null)
-        {
-            restartButton.onClick.AddListener(RestartRiddle);
-        }
-
-        if(exitButton != null)
-        {
+            exitButton.onClick.RemoveAllListeners();
             exitButton.onClick.AddListener(CloseCorrectPanel);
-        }
-    }
-
-    private void Update()
-    {
-        if (riddleReadyToShow && IsPlayerInRange() && !hasAnsweredCorrectly)
-        {
-            ShowRiddle();
-            riddleReadyToShow = false;
         }
     }
 
     public void PrepareRiddle()
     {
-        riddleReadyToShow = true;
-    }
-
-    public void ShowRiddle()
-    {
-        Time.timeScale = 0f;
-        riddlePanel.SetActive(true);
-        riddleDisplayText.text = riddleText;
-
-        for (int i = 0; i < answerButtons.Length; i++)
+        if (!hasAnsweredCorrectly)
         {
-            answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[i];
-            answerButtons[i].onClick.RemoveAllListeners();
-            int index = i;
-            answerButtons[i].onClick.AddListener(() => CheckAnswer(index));
+            ShowRiddle();
         }
     }
 
-    public void CheckAnswer(int chosenIndex)
+    private void ShowRiddle()
+    {
+        Debug.Log($"Showing riddle for NPC: {gameObject.name}");
+
+        // Dynamically update the Restart button listener for this NPC
+        if (restartButton != null)
+        {
+            restartButton.onClick.RemoveAllListeners();
+            restartButton.onClick.AddListener(RestartRiddle); // Assign RestartRiddle for this NPC
+        }
+
+        // Update shared panel content for this NPC
+        riddleDisplayText.text = riddleText;
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[i];
+            answerButtons[i].onClick.RemoveAllListeners(); // Clear previous listeners
+            int index = i; // Capture current index for closure
+            answerButtons[i].onClick.AddListener(() => CheckAnswer(index));
+        }
+
+        // Display the shared panel
+        riddlePanel.SetActive(true);
+        Time.timeScale = 0f; // Pause the game
+    }
+
+    private void CheckAnswer(int chosenIndex)
     {
         if (chosenIndex == correctAnswerIndex)
         {
-            CandyCollection candyCollector = player.GetComponent<CandyCollection>();
-            candyCollector.CollectCandy();
             Debug.Log("Correct! Candy added.");
             hasAnsweredCorrectly = true;
             correctAnswerPanel.SetActive(true);
+            candyCollection.CollectCandy();
+
         }
         else
         {
@@ -94,42 +96,19 @@ public class NPCRiddles : MonoBehaviour
             wrongAnswerPanel.SetActive(true);
         }
 
-        ResumeGame(); // Resume the game after answering
+        riddlePanel.SetActive(false); // Hide the riddle panel
+        Time.timeScale = 1f; // Resume the game
     }
 
     private void RestartRiddle()
     {
-        // Hide the wrongAnswerPanel
+        Debug.Log($"Restarting riddle for NPC: {gameObject.name}");
+
+        // Hide the wrong answer panel
         wrongAnswerPanel.SetActive(false);
 
-        // Reset and re-show the riddle panel
+        // Reuse the shared panel to show the same riddle again
         ShowRiddle();
-    }
-
-    private void ResumeGame()
-    {
-        Time.timeScale = 1f;
-        riddlePanel.SetActive(false);
-
-        foreach (Button button in answerButtons)
-        {
-            button.onClick.RemoveAllListeners();
-        }
-    }
-
-    private bool IsPlayerInRange()
-    {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-        return distance <= playerRange;
-    }
-
-    private void OnDestroy()
-    {
-        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
-        if (dialogueManager != null)
-        {
-            dialogueManager.OnDialogueFinished -= PrepareRiddle;
-        }
     }
 
     public void CloseCorrectPanel()

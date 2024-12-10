@@ -8,7 +8,18 @@ public class DropZone : MonoBehaviour, IDropHandler
     public int totalShapes; // Total number of shapes to match (set this in the inspector)
 
     private static int correctShapesCount = 0; // Shared counter for correct shapes placed
+    private CandyCollection candyCollection; // Reference to the CandyCollection script
 
+    private void Start()
+    {
+        // Find the CandyCollection script in the scene
+        candyCollection = FindObjectOfType<CandyCollection>();
+
+        if (candyCollection == null)
+        {
+            Debug.LogError("CandyCollection script not found in the scene!");
+        }
+    }
     public void OnDrop(PointerEventData eventData)
     {
         GameObject droppedObject = eventData.pointerDrag;
@@ -36,7 +47,18 @@ public class DropZone : MonoBehaviour, IDropHandler
 
     public void ClosePanel()
     {
-        shapesPanel.SetActive(false);
-        correctShapesCount = 0; // Reset counter for future use
+        if (shapesPanel != null)
+        {
+            candyCollection.CollectCandy();
+            shapesPanel.SetActive(false);
+            correctShapesCount = 0; // Reset counter for future use
+
+        }
+        else
+        {
+            Debug.LogError("MiniGamePanel is not assigned!");
+        }
+        //shapesPanel.SetActive(false);
+        //correctShapesCount = 0; // Reset counter for future use
     }
 }
