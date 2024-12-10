@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &30803897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -652,6 +652,22 @@ MonoBehaviour:
   wrongAnswerPanel: {fileID: 30803896}
   restartButton: {fileID: 1157035681}
   exitButton: {fileID: 139972070}
+  wrongAnswerTextDisplay: {fileID: 979910434}
+  wrongAnswerTexts:
+  - 'Oh no, not quite. Maybe try again. '
+  - "Can\u2019t even answer a question\u2026 Try again."
+  - I knew it, not a real ghost? Or would you like to try again?
+  - Not quite. Maybe try again.
+  - "Oops, that isn\u2019t quite right. Try again."
+  correctAnswerTextDisplay: {fileID: 806486527}
+  correctAnswerTexts:
+  - "You got it! Well wasn\u2019t it more fun? Here you are sweetie, enjoy it \u2013
+    you earned it."
+  - "Not bad at all, not bad at all. I\u2019m impressed. Here you are, enjoy! "
+  - "Well color me surprised, you might be a ghost after all. Well done \u2013 enjoy
+    some candy. "
+  - "Great! You got it! Here\u2019s some candy for your trouble."
+  - Well done! Here you are!
 --- !u!50 &51298266
 Rigidbody2D:
   serializedVersion: 4
@@ -2361,7 +2377,7 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2377,11 +2393,11 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionText
       value: 
-      objectReference: {fileID: 1909578078}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionPanel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactableObject
       value: 
@@ -2556,6 +2572,22 @@ MonoBehaviour:
   wrongAnswerPanel: {fileID: 30803896}
   restartButton: {fileID: 1157035681}
   exitButton: {fileID: 139972070}
+  wrongAnswerTextDisplay: {fileID: 979910434}
+  wrongAnswerTexts:
+  - 'Oh no, not quite. Maybe try again. '
+  - "Can\u2019t even answer a question\u2026 Try again."
+  - I knew it, not a real ghost? Or would you like to try again?
+  - Not quite. Maybe try again.
+  - "Oops, that isn\u2019t quite right. Try again."
+  correctAnswerTextDisplay: {fileID: 806486527}
+  correctAnswerTexts:
+  - "You got it! Well wasn\u2019t it more fun? Here you are sweetie, enjoy it \u2013
+    you earned it."
+  - "Not bad at all, not bad at all. I\u2019m impressed. Here you are, enjoy! "
+  - "Well color me surprised, you might be a ghost after all. Well done \u2013 enjoy
+    some candy. "
+  - "Great! You got it! Here\u2019s some candy for your trouble."
+  - Well done! Here you are!
 --- !u!50 &330657715
 Rigidbody2D:
   serializedVersion: 4
@@ -2657,7 +2689,7 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2673,11 +2705,11 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionText
       value: 
-      objectReference: {fileID: 1909578078}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionPanel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactableObject
       value: 
@@ -3573,6 +3605,22 @@ MonoBehaviour:
   wrongAnswerPanel: {fileID: 30803896}
   restartButton: {fileID: 1157035681}
   exitButton: {fileID: 139972070}
+  wrongAnswerTextDisplay: {fileID: 979910434}
+  wrongAnswerTexts:
+  - 'Oh no, not quite. Maybe try again. '
+  - "Can\u2019t even answer a question\u2026 Try again."
+  - I knew it, not a real ghost? Or would you like to try again?
+  - Not quite. Maybe try again.
+  - "Oops, that isn\u2019t quite right. Try again."
+  correctAnswerTextDisplay: {fileID: 806486527}
+  correctAnswerTexts:
+  - "You got it! Well wasn\u2019t it more fun? Here you are sweetie, enjoy it \u2013
+    you earned it."
+  - "Not bad at all, not bad at all. I\u2019m impressed. Here you are, enjoy! "
+  - "Well color me surprised, you might be a ghost after all. Well done \u2013 enjoy
+    some candy. "
+  - "Great! You got it! Here\u2019s some candy for your trouble."
+  - Well done! Here you are!
 --- !u!114 &463591380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4309,7 +4357,7 @@ GameObject:
   - component: {fileID: 529497586}
   - component: {fileID: 529497585}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Candy Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4331,8 +4379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.369, y: -85.5}
-  m_SizeDelta: {x: 182.025, y: 100}
+  m_AnchoredPosition: {x: 168, y: -85.5}
+  m_SizeDelta: {x: 75.857, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529497585
 MonoBehaviour:
@@ -4354,7 +4402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Total candies: 0'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4814,7 +4862,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1951020743}
-  - {fileID: 2085007697}
   - {fileID: 815036995}
   - {fileID: 712986488}
   - {fileID: 2039256322}
@@ -5205,7 +5252,7 @@ GameObject:
   - component: {fileID: 632173606}
   - component: {fileID: 632173605}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Friend Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7256,7 +7303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &815036995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7790,6 +7837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 873136718}
   - component: {fileID: 873136717}
+  - component: {fileID: 873136719}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -7908,6 +7956,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873136719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873136716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859d56b62a9f9ff468d46ad62d709390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &892124400
 GameObject:
   m_ObjectHideFlags: 0
@@ -8610,6 +8670,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940838532}
   m_CullTransparentMesh: 1
+--- !u!1 &973078183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973078184}
+  - component: {fileID: 973078186}
+  - component: {fileID: 973078185}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &973078184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973078183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1951020743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -285, y: -30}
+  m_SizeDelta: {x: 241.297, y: 241.297}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &973078185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973078183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ef76e7d3dcc8aee45a978ef10ba65e72, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &973078186
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973078183}
+  m_CullTransparentMesh: 1
 --- !u!1 &979910432
 GameObject:
   m_ObjectHideFlags: 0
@@ -8756,7 +8891,7 @@ GameObject:
   - component: {fileID: 1007297462}
   - component: {fileID: 1007297461}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22109,6 +22244,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089594307}
   m_CullTransparentMesh: 1
+--- !u!1 &1102523980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102523981}
+  - component: {fileID: 1102523983}
+  - component: {fileID: 1102523982}
+  m_Layer: 5
+  m_Name: Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1102523981
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102523980}
+  m_LocalRotation: {x: 0.026408855, y: -0.0035239425, z: -0.13221863, w: 0.9908625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1951020743}
+  m_LocalEulerAnglesHint: {x: 2.946, y: -0.801, z: -1455.222}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -297.3, y: -18.4}
+  m_SizeDelta: {x: 221.469, y: 291.823}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1102523982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102523980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 32d9160936f2c164cbe85186f90ccf00, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1102523983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102523980}
+  m_CullTransparentMesh: 1
 --- !u!1 &1104820607
 GameObject:
   m_ObjectHideFlags: 0
@@ -22210,6 +22420,81 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &1112302221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112302222}
+  - component: {fileID: 1112302224}
+  - component: {fileID: 1112302223}
+  m_Layer: 5
+  m_Name: Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1112302222
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112302221}
+  m_LocalRotation: {x: 0.026408855, y: -0.0035239425, z: -0.13221863, w: 0.9908625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1951020743}
+  m_LocalEulerAnglesHint: {x: 2.946, y: -0.801, z: -1455.222}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -285, y: -23.225}
+  m_SizeDelta: {x: 111.143, y: 146.451}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1112302223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112302221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e539b383ae1b5c04f84248d07107f760, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1112302224
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112302221}
+  m_CullTransparentMesh: 1
 --- !u!1 &1124324731
 GameObject:
   m_ObjectHideFlags: 0
@@ -24105,7 +24390,7 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -24121,11 +24406,11 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionText
       value: 
-      objectReference: {fileID: 1909578078}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionPanel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactableObject
       value: 
@@ -24276,7 +24561,7 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -24292,11 +24577,11 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionText
       value: 
-      objectReference: {fileID: 1909578078}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionPanel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactableObject
       value: 
@@ -25580,6 +25865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503073262}
   - component: {fileID: 1503073261}
+  - component: {fileID: 1503073263}
   m_Layer: 0
   m_Name: Panel Music
   m_TagString: Untagged
@@ -25698,6 +25984,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1503073263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503073260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859d56b62a9f9ff468d46ad62d709390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1527920930
 GameObject:
   m_ObjectHideFlags: 0
@@ -26224,6 +26522,22 @@ MonoBehaviour:
   wrongAnswerPanel: {fileID: 30803896}
   restartButton: {fileID: 1157035681}
   exitButton: {fileID: 139972070}
+  wrongAnswerTextDisplay: {fileID: 979910434}
+  wrongAnswerTexts:
+  - 'Oh no, not quite. Maybe try again. '
+  - "Can\u2019t even answer a question\u2026 Try again."
+  - I knew it, not a real ghost? Or would you like to try again?
+  - Not quite. Maybe try again.
+  - "Oops, that isn\u2019t quite right. Try again."
+  correctAnswerTextDisplay: {fileID: 806486527}
+  correctAnswerTexts:
+  - "You got it! Well wasn\u2019t it more fun? Here you are sweetie, enjoy it \u2013
+    you earned it."
+  - "Not bad at all, not bad at all. I\u2019m impressed. Here you are, enjoy! "
+  - "Well color me surprised, you might be a ghost after all. Well done \u2013 enjoy
+    some candy. "
+  - "Great! You got it! Here\u2019s some candy for your trouble."
+  - Well done! Here you are!
 --- !u!50 &1583011216
 Rigidbody2D:
   serializedVersion: 4
@@ -27868,140 +28182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772d9f423ed164859975f5e4f03ceab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1909578076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1909578077}
-  - component: {fileID: 1909578079}
-  - component: {fileID: 1909578078}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1909578077
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909578076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2085007697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5632, y: 0}
-  m_SizeDelta: {x: 409.4625, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1909578078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909578076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: You got a candy
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.0421143, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1909578079
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909578076}
-  m_CullTransparentMesh: 1
 --- !u!1 &1910483065
 GameObject:
   m_ObjectHideFlags: 0
@@ -28556,6 +28736,9 @@ RectTransform:
   - {fileID: 529497584}
   - {fileID: 632173604}
   - {fileID: 1007297460}
+  - {fileID: 973078184}
+  - {fileID: 1102523981}
+  - {fileID: 1112302222}
   m_Father: {fileID: 582401993}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -29471,82 +29654,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075364947}
   m_CullTransparentMesh: 1
---- !u!1 &2085007694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2085007697}
-  - component: {fileID: 2085007696}
-  - component: {fileID: 2085007695}
-  m_Layer: 5
-  m_Name: CandyPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2085007695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085007694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2085007696
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085007694}
-  m_CullTransparentMesh: 1
---- !u!224 &2085007697
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085007694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1909578077}
-  m_Father: {fileID: 582401993}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: 26}
-  m_SizeDelta: {x: -1257.991, y: -793.7092}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2107860100
 GameObject:
   m_ObjectHideFlags: 0
@@ -30426,6 +30533,22 @@ MonoBehaviour:
   wrongAnswerPanel: {fileID: 30803896}
   restartButton: {fileID: 1157035681}
   exitButton: {fileID: 139972070}
+  wrongAnswerTextDisplay: {fileID: 979910434}
+  wrongAnswerTexts:
+  - 'Oh no, not quite. Maybe try again. '
+  - "Can\u2019t even answer a question\u2026 Try again."
+  - I knew it, not a real ghost? Or would you like to try again?
+  - Not quite. Maybe try again.
+  - "Oops, that isn\u2019t quite right. Try again."
+  correctAnswerTextDisplay: {fileID: 806486527}
+  correctAnswerTexts:
+  - "You got it! Well wasn\u2019t it more fun? Here you are sweetie, enjoy it \u2013
+    you earned it."
+  - "Not bad at all, not bad at all. I\u2019m impressed. Here you are, enjoy! "
+  - "Well color me surprised, you might be a ghost after all. Well done \u2013 enjoy
+    some candy. "
+  - "Great! You got it! Here\u2019s some candy for your trouble."
+  - Well done! Here you are!
 --- !u!114 &3303590733700418283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30577,7 +30700,7 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -30593,11 +30716,11 @@ PrefabInstance:
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionText
       value: 
-      objectReference: {fileID: 1909578078}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactionPanel
       value: 
-      objectReference: {fileID: 2085007694}
+      objectReference: {fileID: 0}
     - target: {fileID: 9168311971136022221, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: interactableObject
       value: 

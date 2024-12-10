@@ -16,6 +16,7 @@ public class CandyCollection : MonoBehaviour
     // Update the UI text with the current candy count
     private void UpdateCandyCountDisplay()
     {
-        candyCountText.text = "Candy Count: " + candyCount.ToString(); // Update the text
+        candyCountText.text = candyCount.ToString(); // Update the text
+        Debug.Log("Candy count:" + candyCount.ToString());
     }
 }

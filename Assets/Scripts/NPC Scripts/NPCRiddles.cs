@@ -24,6 +24,14 @@ public class NPCRiddles : MonoBehaviour
 
     private CandyCollection candyCollection; // Reference to the CandyCollection script
 
+    [Header("Wrong Answer Feedback")]
+    public TextMeshProUGUI wrongAnswerTextDisplay; // Reference to the TextMeshPro component for wrong answer feedback
+    public string[] wrongAnswerTexts; // Array of possible wrong answer texts
+
+    [Header("Correct Answer Feedback")]
+    public TextMeshProUGUI correctAnswerTextDisplay; // Reference to the TextMeshPro component for wrong answer feedback
+    public string[] correctAnswerTexts; // Array of possible wrong answer texts
+
     private void Start()
     {
         // Find the CandyCollection script in the scene
@@ -87,6 +95,7 @@ public class NPCRiddles : MonoBehaviour
             Debug.Log("Correct! Candy added.");
             hasAnsweredCorrectly = true;
             correctAnswerPanel.SetActive(true);
+            ShowRandomCorrectAnswerText();
             candyCollection.CollectCandy();
 
         }
@@ -94,6 +103,7 @@ public class NPCRiddles : MonoBehaviour
         {
             Debug.Log("Incorrect answer.");
             wrongAnswerPanel.SetActive(true);
+            ShowRandomWrongAnswerText(); // Display a random wrong answer feedback
         }
 
         riddlePanel.SetActive(false); // Hide the riddle panel
@@ -114,5 +124,25 @@ public class NPCRiddles : MonoBehaviour
     public void CloseCorrectPanel()
     {
         correctAnswerPanel.SetActive(false);
+    }
+
+    private void ShowRandomWrongAnswerText()
+    {
+        if (wrongAnswerTexts.Length > 0)
+        {
+            int randomIndex = Random.Range(0, wrongAnswerTexts.Length);
+            string randomText = wrongAnswerTexts[randomIndex];
+            wrongAnswerTextDisplay.text = randomText; // Update the wrong answer text display
+        }
+    }
+
+    private void ShowRandomCorrectAnswerText()
+    {
+        if (correctAnswerTexts.Length > 0)
+        {
+            int randomIndex = Random.Range(0, correctAnswerTexts.Length);
+            string randomText = correctAnswerTexts[randomIndex];
+            correctAnswerTextDisplay.text = randomText; // Update the wrong answer text display
+        }
     }
 }
