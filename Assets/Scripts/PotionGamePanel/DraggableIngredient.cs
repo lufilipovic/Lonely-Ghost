@@ -10,6 +10,10 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     [SerializeField] private string ingredientName; // Set in the Inspector
     [SerializeField] private RecipeManager recipeManager;
 
+    public AudioClip pickupSoundClip; // Reference to this ingredient's sound
+
+    private ItemPickupSound soundManager; // Centralized sound manager
+
     private Vector2 originalPosition; // Store the original position of the ingredient
 
     private void Awake()
@@ -17,12 +21,31 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        // Find the centralized sound manager
+        soundManager = FindObjectOfType<ItemPickupSound>();
+
+        if (soundManager == null)
+        {
+            Debug.LogError("Centralized ItemPickupSound manager is missing!");
+        }
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false; // Allow drop detection
         originalPosition = rectTransform.anchoredPosition; // Save the current position
+
+        // Play the pickup sound using the centralized manager
+        if (soundManager != null && pickupSoundClip != null)
+        {
+            soundManager.PlaySpecificSound(pickupSoundClip);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -55,6 +78,13 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         {
             // If not dropped in the cauldron, return to the original position
             rectTransform.anchoredPosition = originalPosition;
+        }
+
+        if (recipeManager == null)
+        {
+            Debug.LogError("RecipeManager is not assigned in the Inspector!");
+            rectTransform.anchoredPosition = originalPosition; // Reset position
+            return;
         }
     }
 }

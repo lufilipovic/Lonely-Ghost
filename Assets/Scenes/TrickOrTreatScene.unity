@@ -951,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &66739451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &96453417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,8 +1436,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1712,6 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &148669791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1829,6 +1832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &149804102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2231,7 +2235,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &175671249
@@ -2557,6 +2561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &214789719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3070,6 +3075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &256845943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3187,6 +3193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &269417531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3333,6 +3340,8 @@ MonoBehaviour:
   correctCandyTag: bucketCandy
   totalCorrectCandyCount: 18
   miniGamePanel: {fileID: 363648283}
+  correctCandySound: {fileID: 8300000, guid: f743a2b12f2ab46f8a115c22c918e3dd, type: 3}
+  incorrectCandySound: {fileID: 8300000, guid: 9a2b6fc5f776c4d91b5c9e2953be11df, type: 3}
 --- !u!61 &287245721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3401,6 +3410,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117027121}
     m_Modifications:
+    - target: {fileID: 1162242583567061460, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: pickupSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
     - target: {fileID: 1936500016653469925, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.06989
@@ -3482,6 +3495,14 @@ PrefabInstance:
       value: 1.3765047
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.y
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 32d9160936f2c164cbe85186f90ccf00, type: 3}
@@ -3495,6 +3516,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
@@ -3789,6 +3814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117027121}
     m_Modifications:
+    - target: {fileID: 1162242583567061460, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: pickupSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
     - target: {fileID: 1936500016653469925, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -3866,12 +3895,24 @@ PrefabInstance:
       value: 0.9065765
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.y
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7932a8aa641142346a98a4ad2265d5d8, type: 3}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3986,6 +4027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Pumpkin
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &340022782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4093,6 +4135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Spider
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &346946301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4286,6 +4329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &348024402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4356,7 +4400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &363648284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4861,6 +4905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &398578191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4965,6 +5010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Spider
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &424175041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,6 +5978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &492546449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6064,6 +6111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &504861339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6168,6 +6216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eyeball
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &508333258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6506,6 +6555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eyeball
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &527321657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7449,6 +7499,9 @@ GameObject:
   - component: {fileID: 582401991}
   - component: {fileID: 582401990}
   - component: {fileID: 582401994}
+  - component: {fileID: 582401995}
+  - component: {fileID: 582401997}
+  - component: {fileID: 582401996}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -7573,6 +7626,127 @@ MonoBehaviour:
   confirmationPanel: {fileID: 1664079738}
   yesButton: {fileID: 1124324731}
   noButton: {fileID: 1925680708}
+--- !u!114 &582401995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582401989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2111d5851b6bc41a295b303df7048daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &582401996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582401989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366f27debf8264c46b5e05a0034fa074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
+--- !u!82 &582401997
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582401989}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &584915752
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,6 +8095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &603438183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8082,7 +8257,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &613349253
@@ -8145,6 +8320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &615786594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8486,6 +8662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &646606097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8856,7 +9033,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &668866600
@@ -8919,6 +9096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &670282446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9304,6 +9482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &684005075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9567,6 +9746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &731130965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9869,6 +10049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Blood
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &763105949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9922,171 +10103,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!43 &764568185
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 42
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 16
-    localAABB:
-      m_Center: {x: -0.0000009536743, y: 0, z: 0}
-      m_Extent: {x: 10.240001, y: 10.24, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 00000100020003000100000003000400010005000400030006000400050004000600070002000800000000000900030001000a00020004000b00010003000c00050007000d00040005000e00060006000f000700
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 16
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 704
-    _typelessdata: 0ad723410ad723c1000000000000803f0000008000000080000000800ad723410ad723c10ad723410ad723c10ad723410ad7234100000000000000800000803f00000080000000800ad723410ad723410ad723410ad723410ad7234100000000000000000000803f0000008000000080000000800ad723410ad723410ad723410ad723c1000080b50ad723c10000000000000080000080bf00000000000000800ad723410ad723c10cd723c10ad723c1000080b50ad7234100000000000000800000803f00000080000000800cd723c10ad723410ad723410ad723410cd723c10ad723c10000000000000080000080bf00000000000000800cd723c10ad723c10cd723c10ad723c10cd723c10000000000000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad723410cd723c10ad7234100000000000080bf0000008000000080000000800cd723c10ad723410cd723c10ad723410ad7234100000000000000000000803f0000008000000080000000800ad723410ad723410ad723410ad723c10ad723410ad723c10000000000000080000080bf00000000000000800ad723410ad723c10ad723410ad723c10ad723410ad72341000000000000803f0000008000000080000000800ad723410ad723410ad723410ad72341000080b50ad7234100000000000000800000803f00000080000000800cd723c10ad723410ad723410ad72341000080b50ad723c10000000000000080000080bf00000000000000800ad723410ad723c10cd723c10ad723c10cd723c10ad7234100000000000000800000803f00000080000000800cd723c10ad723410cd723c10ad723410cd723c10ad723c100000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad723c10cd723c10000000000000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad72341
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -0.0000009536743, y: 0, z: 0}
-    m_Extent: {x: 10.240001, y: 10.24, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &768923946
 GameObject:
   m_ObjectHideFlags: 0
@@ -10333,6 +10349,8 @@ MonoBehaviour:
   matchingTag: purple
   shapesPanel: {fileID: 1922924994}
   totalShapes: 18
+  correctCandySound: {fileID: 8300000, guid: f743a2b12f2ab46f8a115c22c918e3dd, type: 3}
+  incorrectCandySound: {fileID: 8300000, guid: 9a2b6fc5f776c4d91b5c9e2953be11df, type: 3}
 --- !u!114 &785801831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10799,6 +10817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &796505560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11135,6 +11154,8 @@ MonoBehaviour:
   matchingTag: orange
   shapesPanel: {fileID: 1922924994}
   totalShapes: 18
+  correctCandySound: {fileID: 8300000, guid: f743a2b12f2ab46f8a115c22c918e3dd, type: 3}
+  incorrectCandySound: {fileID: 8300000, guid: 9a2b6fc5f776c4d91b5c9e2953be11df, type: 3}
 --- !u!114 &821417452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11388,6 +11409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Bat
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &833351814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11617,7 +11639,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9f3d6ddb17c14fdebfa09614f0e0210, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.042
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11812,8 +11834,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12063,6 +12085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &931974671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12819,6 +12842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &996193796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13057,6 +13081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eyeball
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1012765677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13259,8 +13284,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13509,6 +13534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Blood
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1036670662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13628,6 +13654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eyeball
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1043104261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13760,6 +13787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1044665477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14013,6 +14041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1067535204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14297,6 +14326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Pumpkin
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1089594311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14679,6 +14709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1104820610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15034,6 +15065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Bat
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1127141411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15344,7 +15376,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1154829727
@@ -15407,6 +15439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1155505525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15663,6 +15696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1162679140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16167,6 +16201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1180458269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16347,6 +16382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Blood
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1199755002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16479,6 +16515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1203653992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16792,6 +16829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1233850056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16958,6 +16996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1235262943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17719,6 +17758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1282857634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17772,6 +17812,171 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!43 &1283441676
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 42
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 16
+    localAABB:
+      m_Center: {x: -0.0000009536743, y: 0, z: 0}
+      m_Extent: {x: 10.240001, y: 10.24, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 00000100020003000100000003000400010005000400030006000400050004000600070002000800000000000900030001000a00020004000b00010003000c00050007000d00040005000e00060006000f000700
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 16
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 704
+    _typelessdata: 0ad723410ad723c1000000000000803f0000008000000080000000800ad723410ad723c10ad723410ad723c10ad723410ad7234100000000000000800000803f00000080000000800ad723410ad723410ad723410ad723410ad7234100000000000000000000803f0000008000000080000000800ad723410ad723410ad723410ad723c1000080b50ad723c10000000000000080000080bf00000000000000800ad723410ad723c10cd723c10ad723c1000080b50ad7234100000000000000800000803f00000080000000800cd723c10ad723410ad723410ad723410cd723c10ad723c10000000000000080000080bf00000000000000800cd723c10ad723c10cd723c10ad723c10cd723c10000000000000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad723410cd723c10ad7234100000000000080bf0000008000000080000000800cd723c10ad723410cd723c10ad723410ad7234100000000000000000000803f0000008000000080000000800ad723410ad723410ad723410ad723c10ad723410ad723c10000000000000080000080bf00000000000000800ad723410ad723c10ad723410ad723c10ad723410ad72341000000000000803f0000008000000080000000800ad723410ad723410ad723410ad72341000080b50ad7234100000000000000800000803f00000080000000800cd723c10ad723410ad723410ad72341000080b50ad723c10000000000000080000080bf00000000000000800ad723410ad723c10cd723c10ad723c10cd723c10ad7234100000000000000800000803f00000080000000800cd723c10ad723410cd723c10ad723410cd723c10ad723c100000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad723c10cd723c10000000000000000000080bf0000008000000080000000800cd723c10ad723c10cd723c10ad72341
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -0.0000009536743, y: 0, z: 0}
+    m_Extent: {x: 10.240001, y: 10.24, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1293665759
 GameObject:
   m_ObjectHideFlags: 0
@@ -17851,6 +18056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1293665764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18211,6 +18417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Pumpkin
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1324117418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18272,6 +18479,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117027121}
     m_Modifications:
+    - target: {fileID: 1162242583567061460, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: pickupSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
     - target: {fileID: 1936500016653469925, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.03
@@ -18349,9 +18560,21 @@ PrefabInstance:
       value: 3.3731275
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.y
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e539b383ae1b5c04f84248d07107f760, type: 3}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -18613,6 +18836,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117027121}
     m_Modifications:
+    - target: {fileID: 1162242583567061460, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: pickupSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
     - target: {fileID: 1936500016653469925, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -18694,6 +18921,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.y
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 71308a676a992fd449d55f6970a49b6b, type: 3}
@@ -18712,6 +18947,10 @@ PrefabInstance:
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18902,6 +19141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1362989780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19141,6 +19381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1386212658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19406,6 +19647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Pumpkin
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1394395172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20278,6 +20520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1456651846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20444,6 +20687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1477087779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20576,6 +20820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1479205541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20944,7 +21189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1503073261
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20957,7 +21202,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8567ba7c346934798bc5c3dc5d3bc9f7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.427
+  m_Volume: 0.077
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21152,8 +21397,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21997,6 +22242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1656478984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22116,6 +22362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Spider
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1662582696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22221,6 +22468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1664021563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22588,6 +22836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1757905645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22720,6 +22969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1770644694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22824,6 +23074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Bat
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1778638012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22941,6 +23192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1779018370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23078,8 +23330,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23602,6 +23854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1820411736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23988,6 +24241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Bat
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1828408412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24227,6 +24481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1854001408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24434,6 +24689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Spider
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1871187536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24595,6 +24851,8 @@ MonoBehaviour:
   candyCounterText: {fileID: 1446444213}
   potionMiniGamePanel: {fileID: 662202421}
   cauldronArea: {fileID: 1871289845}
+  correctCandySound: {fileID: 8300000, guid: f743a2b12f2ab46f8a115c22c918e3dd, type: 3}
+  incorrectCandySound: {fileID: 8300000, guid: 9a2b6fc5f776c4d91b5c9e2953be11df, type: 3}
 --- !u!114 &1871289851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24982,8 +25240,8 @@ MonoBehaviour:
   - {x: 10.24, y: 10.24, z: 0}
   - {x: 10.24, y: -10.24, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 764568185}
-  m_InstanceId: 513576
+  m_Mesh: {fileID: 1283441676}
+  m_InstanceId: 561476
   m_LocalBounds:
     m_Center: {x: -0.0000009536743, y: 0, z: 0}
     m_Extent: {x: 10.240001, y: 10.24, z: 0}
@@ -25053,6 +25311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eyeball
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1910483069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25518,6 +25777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Blood
   recipeManager: {fileID: 1871289850}
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1927959879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25770,6 +26030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1941754718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26039,6 +26300,8 @@ MonoBehaviour:
   matchingTag: yellow
   shapesPanel: {fileID: 1922924994}
   totalShapes: 18
+  correctCandySound: {fileID: 8300000, guid: f743a2b12f2ab46f8a115c22c918e3dd, type: 3}
+  incorrectCandySound: {fileID: 8300000, guid: 9a2b6fc5f776c4d91b5c9e2953be11df, type: 3}
 --- !u!114 &1953692221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26317,6 +26580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1955092320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26583,6 +26847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1962087732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26685,6 +26950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &1966723864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26924,6 +27190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &2015028061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27145,6 +27412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &2035273981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27406,6 +27674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &2052640820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27898,6 +28167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48539ea14771f4622be4b3c4bc4ebbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &2084226215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28108,6 +28378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba3299c81e3c42f0b938d533e9105f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSoundClip: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
 --- !u!114 &2113936790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28182,6 +28453,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117027121}
+  - component: {fileID: 2117027122}
+  - component: {fileID: 2117027123}
   m_Layer: 0
   m_Name: Candies
   m_TagString: Untagged
@@ -28209,6 +28482,115 @@ Transform:
   - {fileID: 1331042660}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117027122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117027120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366f27debf8264c46b5e05a0034fa074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
+--- !u!82 &2117027123
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117027120}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2123683362
 GameObject:
   m_ObjectHideFlags: 0
@@ -28863,6 +29245,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117027121}
     m_Modifications:
+    - target: {fileID: 1162242583567061460, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: pickupSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a0d35cfd16142168cfd50eff643e86, type: 3}
     - target: {fileID: 1936500016653469925, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -28940,9 +29326,21 @@ PrefabInstance:
       value: 0.66046655
       objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_Size.y
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 99003a595493cd94cbf46a80890e1bea, type: 3}
+    - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6775154854780790658, guid: e500dd865d010415c8be7143549630a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

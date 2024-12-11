@@ -9,6 +9,10 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     private Vector2 originalPosition; // To reset position if needed
 
+    public AudioClip pickupSoundClip; // Reference to the drag sound
+
+    private ItemPickupSound soundManager; // Reference to the centralized sound manager
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -20,10 +24,23 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
+
+        // Find the centralized sound manager
+        soundManager = FindObjectOfType<ItemPickupSound>();
+        if (soundManager == null)
+        {
+            Debug.LogError("Centralized ItemPickupSound manager is missing!");
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // Play the pickup sound using the centralized manager
+        if (soundManager != null && pickupSoundClip != null)
+        {
+            soundManager.PlaySpecificSound(pickupSoundClip);
+        }
+
         originalPosition = rectTransform.anchoredPosition; // Store the original position
         canvasGroup.blocksRaycasts = false; // Allow drop detection
     }

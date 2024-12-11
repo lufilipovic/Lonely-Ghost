@@ -8,6 +8,10 @@ public class CandyDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private Vector2 originalPosition;
     private Transform originalParent;
 
+    public AudioClip pickupSoundClip; // Reference to this candy's sound
+
+    private ItemPickupSound soundManager; // Centralized sound manager
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -15,9 +19,16 @@ public class CandyDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         originalPosition = rectTransform.anchoredPosition;
         originalParent = transform.parent;
 
+        // Find the centralized sound manager
+        soundManager = FindObjectOfType<ItemPickupSound>();
+
         if (canvasGroup == null)
         {
             Debug.LogWarning("CanvasGroup component is missing from " + gameObject.name + ". Dragging may not work as intended.");
+        }
+        if (soundManager == null)
+        {
+            Debug.LogError("Centralized ItemPickupSound manager is missing!");
         }
     }
 
@@ -26,6 +37,12 @@ public class CandyDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         if (canvasGroup != null)
         {
             canvasGroup.blocksRaycasts = false; // Allow raycasts to pass through
+        }
+
+        // Play the pickup sound using the centralized manager
+        if (soundManager != null && pickupSoundClip != null)
+        {
+            soundManager.PlaySpecificSound(pickupSoundClip);
         }
 
         // Move to the top of the hierarchy

@@ -5,36 +5,42 @@ using TMPro;
 public class RecipeManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    [SerializeField] private TextMeshProUGUI recipeText;   // TextMeshPro for the recipe
-    [SerializeField] private GameObject recipePanel;      // Recipe display panel
-    [SerializeField] private TextMeshProUGUI feedbackText; // TextMeshPro for feedback
-    [SerializeField] private TextMeshProUGUI candyCounterText; // TextMeshPro for candy counter
-    [SerializeField] private GameObject potionMiniGamePanel;
+    [SerializeField] private TextMeshProUGUI recipeText; // Displays the recipe
+    [SerializeField] private GameObject recipePanel; // Recipe display panel
+    [SerializeField] private TextMeshProUGUI feedbackText; // Feedback for correct/incorrect ingredients
+    [SerializeField] private TextMeshProUGUI candyCounterText; // Displays candy count
+    [SerializeField] private GameObject potionMiniGamePanel; // Mini-game panel for the potion
 
     private CandyCollection candyCollection; // Reference to the CandyCollection script
+    private ItemSoundManager soundManager; // Reference to the ItemSoundManager script
 
-
-    [Header("Cauldron")]
-    [SerializeField] private Transform cauldronArea;
+    [Header("Cauldron Area")]
+    [SerializeField] private Transform cauldronArea; // Drop zone for ingredients
 
     private string[] currentRecipe; // Stores the steps of the current recipe
-    private int currentStep = 0;   // Tracks the current step in the recipe
-    private int candyCount = 0;    // Tracks candies earned
-
     private Dictionary<string, int> currentRecipeQuantities; // Tracks required quantities for each step
-    private Dictionary<string, int> addedQuantities; // Tracks how many of each ingredient have been added
-
+    private int currentStep = 0; // Tracks the current step in the recipe
     private string[] ingredients = { "Bat", "Eyeball", "Spider", "Blood", "Pumpkin" }; // Ingredient pool
+
+    [Header("Audio Clips")]
+    public AudioClip correctCandySound; // Sound for correct candy placement
+    public AudioClip incorrectCandySound; // Sound for incorrect candy placement
 
     private void Start()
     {
-        // Find the CandyCollection script in the scene
         candyCollection = FindObjectOfType<CandyCollection>();
+        soundManager = FindObjectOfType<ItemSoundManager>();
 
         if (candyCollection == null)
         {
             Debug.LogError("CandyCollection script not found in the scene!");
         }
+
+        if (soundManager == null)
+        {
+            Debug.LogError("ItemSoundManager not found in the scene!");
+        }
+
         GenerateNewRecipe();
     }
 
@@ -51,16 +57,15 @@ public class RecipeManager : MonoBehaviour
 
     private void GenerateNewRecipe()
     {
-        int numberOfSteps = Random.Range(3, 5); // Randomize 2-4 steps
+        int numberOfSteps = Random.Range(3, 5); // Randomize 3-4 steps
         currentRecipe = new string[numberOfSteps];
         currentRecipeQuantities = new Dictionary<string, int>();
-        addedQuantities = new Dictionary<string, int>();
+        currentStep = 0; // Reset current step
 
         List<string> usedIngredients = new List<string>();
 
         for (int i = 0; i < numberOfSteps; i++)
         {
-            // Select a random ingredient
             string ingredient;
             do
             {
@@ -69,88 +74,84 @@ public class RecipeManager : MonoBehaviour
 
             usedIngredients.Add(ingredient);
 
-            // Select a random quantity
-            int quantity = Random.Range(1, 5); // Random quantity between 1 and 3
+            int quantity = Random.Range(1, 5); // Random quantity between 1 and 4
 
-            // Create the recipe step
-            currentRecipe[i] = $"Add \n {quantity} {ingredient}" + (quantity > 1 ? "s" : "");
+            currentRecipe[i] = $"Add {quantity} {ingredient}" + (quantity > 1 ? "s" : "");
             currentRecipeQuantities[ingredient] = quantity; // Store required quantity
         }
 
         recipeText.text = string.Join("\n", currentRecipe); // Update recipe UI
-        currentStep = 0; // Reset steps
     }
 
     public bool AddIngredient(string ingredient)
     {
         if (currentStep >= currentRecipe.Length)
         {
-            feedbackText.text = "You've added all the ingredients!";
+            feedbackText.text = "You've already completed the recipe!";
             return false;
         }
 
-        // Get the current ingredient and required quantity
-        string expected = currentRecipe[currentStep];
-        string expectedIngredient = ExtractIngredientName(expected);
+        string expectedStep = currentRecipe[currentStep];
+        string expectedIngredient = ExtractIngredientName(expectedStep);
         int requiredQuantity = currentRecipeQuantities[expectedIngredient];
 
-        // Increment the added quantity for the ingredient
-        if (!addedQuantities.ContainsKey(expectedIngredient))
+        if (ingredient == expectedIngredient)
         {
-            addedQuantities[expectedIngredient] = 0;
-        }
-        addedQuantities[expectedIngredient]++;
+            currentRecipeQuantities[expectedIngredient]--; // Decrement the required quantity
+            soundManager?.PlaySpecificSound(correctCandySound);
 
-        // Check if the added quantity meets the required quantity
-        if (expectedIngredient == ingredient && addedQuantities[expectedIngredient] >= requiredQuantity)
-        {
-            feedbackText.text = "Correct!";
-            currentStep++;
-
-            // Check if the recipe is complete
-            if (currentStep == currentRecipe.Length)
+            if (currentRecipeQuantities[expectedIngredient] <= 0)
             {
-                CompleteRecipe(); // Handle recipe completion
+                currentStep++; // Move to the next step
+                feedbackText.text = $"{expectedIngredient} complete!";
+
+                if (currentStep == currentRecipe.Length)
+                {
+                    CompleteRecipe();
+                }
             }
-            return true; // Ingredient and quantity were correct
-        }
-        else if (expectedIngredient == ingredient)
-        {
-            feedbackText.text = $"You need {requiredQuantity - addedQuantities[expectedIngredient]} more!";
-            return true; // Correct ingredient but not enough quantity yet
+            else
+            {
+                feedbackText.text = $"You need {currentRecipeQuantities[expectedIngredient]} more {expectedIngredient}(s)!";
+            }
+            return true;
         }
         else
         {
-            feedbackText.text = "Wrong ingredient! Try again!";
-            return false; // Incorrect ingredient
+            feedbackText.text = $"Wrong ingredient! You need {expectedIngredient} next!";
+            soundManager?.PlaySpecificSound(incorrectCandySound);
+            return false;
         }
     }
 
     private void CompleteRecipe()
     {
-        feedbackText.text = "Potion Complete! You've earned a candy!";
-        candyCollection.candyCount += 2;
-        candyCounterText.text = "Candy: " + candyCount;
+        feedbackText.text = "Potion Complete! You've earned candy!";
 
-        if (potionMiniGamePanel != null)
+        // Add candies to the collection
+        if (candyCollection != null)
         {
-            candyCollection.CollectCandy();
-            potionMiniGamePanel.SetActive(false);
+            candyCollection.CollectCandy(); // Add 1 candy
+            candyCollection.CollectCandy(); // Add another candy
         }
         else
         {
-            Debug.LogError("MiniGamePanel is not assigned!");
+            Debug.LogError("CandyCollection reference is missing!");
         }
 
-        // Generate a new recipe after a short delay
-        Invoke("GenerateNewRecipe", 2f);
+        // Close the mini-game panel
+        if (potionMiniGamePanel != null)
+        {
+            potionMiniGamePanel.SetActive(false);
+        }
+
+        Invoke(nameof(GenerateNewRecipe), 20f); // Generate a new recipe after 2 seconds
     }
 
     private string ExtractIngredientName(string recipeStep)
     {
-        // Extract ingredient name from recipe step by splitting the string
         string[] parts = recipeStep.Split(' ');
-        return parts[parts.Length - 1].TrimEnd('s'); // Trim 's' for plural forms
+        return parts[2].TrimEnd('s'); // Extract ingredient name and remove plural 's'
     }
 
     public Transform GetCauldronArea()

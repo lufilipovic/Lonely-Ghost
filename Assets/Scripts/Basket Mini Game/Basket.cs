@@ -10,14 +10,26 @@ public class Basket : MonoBehaviour, IDropHandler
 
     private int correctCandyPlacedCount = 0; // Counter for correct candies placed
 
+    [Header("Audio Clips")]
+    public AudioClip correctCandySound; // Sound for correct candy placement
+    public AudioClip incorrectCandySound; // Sound for incorrect candy placement
+
+    private ItemSoundManager soundManager; // Reference to the centralized ItemSoundManager
+
     private void Start()
     {
         // Find the CandyCollection script in the scene
         candyCollection = FindObjectOfType<CandyCollection>();
-
         if (candyCollection == null)
         {
             Debug.LogError("CandyCollection script not found in the scene!");
+        }
+
+        // Find the centralized sound manager
+        soundManager = FindObjectOfType<ItemSoundManager>();
+        if (soundManager == null)
+        {
+            Debug.LogError("Centralized ItemSoundManager not found in the scene!");
         }
     }
 
@@ -29,8 +41,14 @@ public class Basket : MonoBehaviour, IDropHandler
         {
             Debug.Log("Correct candy placed!");
 
-            //Increment the correct candy placed count
+            // Increment the correct candy placed count
             correctCandyPlacedCount++;
+
+            // Play correct candy sound
+            if (soundManager != null && correctCandySound != null)
+            {
+                soundManager.PlaySpecificSound(correctCandySound);
+            }
 
             // Destroy the dropped candy
             Destroy(droppedCandy);
@@ -54,6 +72,11 @@ public class Basket : MonoBehaviour, IDropHandler
         else
         {
             Debug.Log("Incorrect candy.");
+            // Play incorrect candy sound
+            if (soundManager != null && incorrectCandySound != null)
+            {
+                soundManager.PlaySpecificSound(incorrectCandySound);
+            }
         }
     }
 }
