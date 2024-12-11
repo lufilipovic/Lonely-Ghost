@@ -73,7 +73,7 @@ public class RecipeManager : MonoBehaviour
             int quantity = Random.Range(1, 4); // Random quantity between 1 and 3
 
             // Create the recipe step
-            currentRecipe[i] = $"Add \n {quantity} \n {ingredient}" + (quantity > 1 ? "s" : "");
+            currentRecipe[i] = $"Add \n {quantity} {ingredient}" + (quantity > 1 ? "s" : "");
             currentRecipeQuantities[ingredient] = quantity; // Store required quantity
         }
 
@@ -129,7 +129,7 @@ public class RecipeManager : MonoBehaviour
     private void CompleteRecipe()
     {
         feedbackText.text = "Potion Complete! You've earned a candy!";
-        candyCount++;
+        candyCollection.candyCount += 2;
         candyCounterText.text = "Candy: " + candyCount;
 
         if (potionMiniGamePanel != null)

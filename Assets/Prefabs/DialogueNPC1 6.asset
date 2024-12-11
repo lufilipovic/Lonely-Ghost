@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d983f4ed6ebd420fb63de139ea9c6e8, type: 3}
+  m_Name: DialogueNPC1 6
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: Barnaboos
+    dialogueText: Look at you, all alone. Where are all your friends?
+  - speakerName: NPC
+    dialogueText: "They left me here, all alone. They say I\u2019m bad luck for getting
+      candy."
+  - speakerName: Barnaboos
+    dialogueText: "We\u2019ll show them. Here, share some of mine \u2013 that\u2019ll
+      teach them."
+  - speakerName: NPC
+    dialogueText: Maybe the friend I was missing all along was you, ghost.

@@ -50,7 +50,7 @@ public class DropZone : MonoBehaviour, IDropHandler
     {
         if (shapesPanel != null)
         {
-            candyCollection.CollectCandy();
+            candyCollection.candyCount += 2;
             shapesPanel.SetActive(false);
             correctShapesCount = 0; // Reset counter for future use
 

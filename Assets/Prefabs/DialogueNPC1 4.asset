@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d983f4ed6ebd420fb63de139ea9c6e8, type: 3}
+  m_Name: DialogueNPC1 4
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: Barnaboos
+    dialogueText: Hey there, why so sad?
+  - speakerName: NPC
+    dialogueText: "It\u2026 "
+  - speakerName: NPC
+    dialogueText: "It\u2019s my brother..."
+  - speakerName: NPC
+    dialogueText: Halloween always reminds me of him. Just makes me sad, you know.
+  - speakerName: Barnaboos
+    dialogueText: "I get it, but don\u2019t be sad. "
+  - speakerName: Barnaboos
+    dialogueText: 'Not all who left us on Halloween are gone forever. '
+  - speakerName: Barnaboos
+    dialogueText: Thanks, ghostie! .
+  - speakerName: Barnaboos
+    dialogueText: Maybe some candy would cheer you up?
+  - speakerName: NPC
+    dialogueText: 'Thanks, ghostie! '
+  - speakerName: NPC
+    dialogueText: You are not my brother, but you clearly are my friend.

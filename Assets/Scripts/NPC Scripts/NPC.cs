@@ -48,7 +48,7 @@ public class NPC : MonoBehaviour
         if (dialogueManager != null && dialogueData != null)
         {
             dialogueManager.StartDialogue(dialogueData);
-            dialogueManager.OnDialogueFinished += TriggerRiddle; // Subscribe to dialogue end event
+            dialogueManager.OnDialogueFinished += HandlePostDialogue; // Subscribe to dialogue end event
             hasTriggeredDialogue = true; // Mark dialogue as triggered
         }
         else
@@ -57,17 +57,42 @@ public class NPC : MonoBehaviour
         }
     }
 
-    private void TriggerRiddle()
+    private void HandlePostDialogue()
     {
         DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
         if (dialogueManager != null)
         {
-            dialogueManager.OnDialogueFinished -= TriggerRiddle; // Unsubscribe from the event
+            dialogueManager.OnDialogueFinished -= HandlePostDialogue; // Unsubscribe from the event
         }
 
+        // Show riddle panel if there's a riddle and it hasn't been answered
         if (npcRiddles != null && !npcRiddles.HasAnsweredCorrectly)
         {
-            npcRiddles.PrepareRiddle(); // Prepare and show the riddle
+            npcRiddles.PrepareRiddle();
+            return; // Stop further execution to prevent showing candy choice panel
         }
+
+        // Show candy choice panel if no riddle or riddle is already answered
+        TriggerCandyChoice();
+    }
+
+    private void TriggerCandyChoice()
+    {
+        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
+        if (dialogueManager != null)
+        {
+            dialogueManager.candyChoicePanel.SetActive(true); // Show the candy choice panel
+        }
+    }
+
+    public void ResetDialogueState()
+    {
+        if (npcRiddles != null && !npcRiddles.HasAnsweredCorrectly)
+        {
+            // Keep the dialogue triggered if the riddle hasn't been answered
+            return;
+        }
+
+        hasTriggeredDialogue = false; // Allow the player to reinitiate dialogue
     }
 }

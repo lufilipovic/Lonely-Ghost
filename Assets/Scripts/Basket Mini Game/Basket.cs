@@ -32,12 +32,6 @@ public class Basket : MonoBehaviour, IDropHandler
             //Increment the correct candy placed count
             correctCandyPlacedCount++;
 
-            //// Add candy to the inventory
-            //if (candyCollection != null)
-            //{
-            //    candyCollection.CollectCandy();
-            //}
-
             // Destroy the dropped candy
             Destroy(droppedCandy);
 
@@ -47,6 +41,7 @@ public class Basket : MonoBehaviour, IDropHandler
                 Debug.Log("All correct candies placed! Closing panel...");
                 if (miniGamePanel != null)
                 {
+                    candyCollection.CollectCandy();
                     candyCollection.CollectCandy();
                     miniGamePanel.SetActive(false);
                 }
