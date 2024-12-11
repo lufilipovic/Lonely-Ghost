@@ -28,6 +28,7 @@ public class DropZone : MonoBehaviour, IDropHandler
             // Snap the object to the drop zone
             droppedObject.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             Debug.Log("Correct Match!");
+            Destroy(droppedObject);
 
             // Increment the correct shapes counter
             correctShapesCount++;

@@ -24,7 +24,7 @@ public class RecipeManager : MonoBehaviour
     private Dictionary<string, int> currentRecipeQuantities; // Tracks required quantities for each step
     private Dictionary<string, int> addedQuantities; // Tracks how many of each ingredient have been added
 
-    private string[] ingredients = { "Bat", "Eyeball", "Spider", "Hat", "Pumpkin" }; // Ingredient pool
+    private string[] ingredients = { "Bat", "Eyeball", "Spider", "Blood", "Pumpkin" }; // Ingredient pool
 
     private void Start()
     {
@@ -73,7 +73,7 @@ public class RecipeManager : MonoBehaviour
             int quantity = Random.Range(1, 4); // Random quantity between 1 and 3
 
             // Create the recipe step
-            currentRecipe[i] = $"Add {quantity} {ingredient}" + (quantity > 1 ? "s" : "");
+            currentRecipe[i] = $"Add \n {quantity} \n {ingredient}" + (quantity > 1 ? "s" : "");
             currentRecipeQuantities[ingredient] = quantity; // Store required quantity
         }
 

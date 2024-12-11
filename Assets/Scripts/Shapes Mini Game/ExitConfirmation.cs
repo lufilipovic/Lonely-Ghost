@@ -35,6 +35,7 @@ public class ExitConfirmation : MonoBehaviour
         //canReopenPanel = false; // Prevent reopening of the panel
 
         Debug.Log("Panel has been closed permanently.");
+        Time.timeScale = 1f;
     }
 
     public void OnNoButtonPressed()
