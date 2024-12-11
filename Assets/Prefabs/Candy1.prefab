@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6775154854780790658}
   - component: {fileID: 6190011803205046409}
   - component: {fileID: 1162242583567061460}
+  - component: {fileID: 8752339119234362225}
   m_Layer: 0
   m_Name: Candy1
   m_TagString: Untagged
@@ -134,3 +135,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupRange: 2
+--- !u!114 &8752339119234362225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573595996350995041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 1}
+  m_UseGraphicAlpha: 1
