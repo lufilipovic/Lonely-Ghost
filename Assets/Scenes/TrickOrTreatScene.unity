@@ -1537,10 +1537,15 @@ MonoBehaviour:
   miniGamePanel: {fileID: 662202421}
   interactPrompt: {fileID: 4296105}
   dialogueLines:
-  - haskjfhaskjhfajshfashfas
-  - fajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
+  - "NPC: Oh dear, oh dear! My potion is a disaster! Look at it\u2014just bubbling
+    nonsense!"
+  - 'Barnaboos: What happened? Did you forget an ingredient?'
+  - "NPC: Worse! My recipe scroll flew out the window, and now I can\u2019t remember
+    what to add next! A naughty little bat swooped in and startled me, and poof\u2014there
+    went the scroll!"
+  - 'Barnaboos: That sounds tricky. Do you need help?'
+  - 'NPC: Would you? Oh, that would be wonderful! I just need the right ingredients
+    to finish the potion. '
 --- !u!50 &114166326
 Rigidbody2D:
   serializedVersion: 4
@@ -6594,7 +6599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &546527024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19711,10 +19716,15 @@ MonoBehaviour:
   miniGamePanel: {fileID: 363648283}
   interactPrompt: {fileID: 4296105}
   dialogueLines:
-  - haskjfhaskjhfajshfashfas
-  - fajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
+  - 'NPC: Oh no, oh no! What a terrible mess! '
+  - "Barnaboos: What\u2019s wrong? What happened?"
+  - "NPC: My candy bucket tipped over, and now all the candy is scattered everywhere!
+    A spooky ghost zoomed by and knocked it over. It wasn\u2019t even a cute ghost.
+    So rude!"
+  - 'NPC: Could you help me sort the candy back into the bucket? '
+  - 'Barnaboos: That sounds awful!'
+  - 'NPC: Could you help me sort the candy back into the bucket? '
+  - "Barnaboos: Of course, I\u2019d be happy to help!"
 --- !u!1 &1503073260
 GameObject:
   m_ObjectHideFlags: 0
@@ -26901,10 +26911,14 @@ MonoBehaviour:
   miniGamePanel: {fileID: 1922924994}
   interactPrompt: {fileID: 4296105}
   dialogueLines:
-  - haskjfhaskjhfajshfashfas
-  - fajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
-  - fajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkasfajfahskjfhajskhfjkas
+  - "NPC: Oh no, oh no, everything\u2019s out of place! This is a color catastrophe!
+    My shapes are all jumbled up!"
+  - 'Barnaboos: What happened? Did something go wrong?'
+  - "NPC: I was practicing my super stealthy color-changing trick when\u2014oops!
+    My tail knocked the pots over. Now all the shapes are everywhere! None of them
+    are where they\u2019re supposed to be"
+  - "Barnaboos: That\u2019s a big mess. How can I help?"
+  - "NPC: Oh, you\u2019d help me? Thank you, thank you!"
 --- !u!50 &2123683365
 Rigidbody2D:
   serializedVersion: 4
