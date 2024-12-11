@@ -51,7 +51,7 @@ public class RecipeManager : MonoBehaviour
 
     private void GenerateNewRecipe()
     {
-        int numberOfSteps = Random.Range(2, 5); // Randomize 2-4 steps
+        int numberOfSteps = Random.Range(3, 5); // Randomize 2-4 steps
         currentRecipe = new string[numberOfSteps];
         currentRecipeQuantities = new Dictionary<string, int>();
         addedQuantities = new Dictionary<string, int>();
@@ -70,7 +70,7 @@ public class RecipeManager : MonoBehaviour
             usedIngredients.Add(ingredient);
 
             // Select a random quantity
-            int quantity = Random.Range(1, 4); // Random quantity between 1 and 3
+            int quantity = Random.Range(1, 5); // Random quantity between 1 and 3
 
             // Create the recipe step
             currentRecipe[i] = $"Add \n {quantity} {ingredient}" + (quantity > 1 ? "s" : "");

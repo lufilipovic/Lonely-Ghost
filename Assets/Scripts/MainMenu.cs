@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
     // Play game function - OnCLick
     public void PlayGame()
     {
-        SceneManager.LoadScene("TrickOrTreatScene");
+        SceneManager.LoadScene("Intro Scene");
     }
     // SetActive instructions Panel 
     public void InstructionsOn()
